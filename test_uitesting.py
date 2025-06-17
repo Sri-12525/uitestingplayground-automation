@@ -64,7 +64,7 @@ class TestE2E:
         driver.back()
         
         
-    def test_text_inputbox(self):
+    def test_textinputbox(self):
         driver = self.driver
         
         print("Launching text input url .. ")

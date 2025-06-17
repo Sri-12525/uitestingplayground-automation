@@ -29,5 +29,9 @@ class TextInput:
         button.click()
         print(button.text)
         
+        ####checking if the button is reflecting the correct input we gave        
+        updated_text = driver.execute_script("return arguments[0].innerText;", button)
+        print(f"Updated button label is: {updated_text}")
         time.sleep(2)
+        
         
