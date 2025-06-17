@@ -23,6 +23,8 @@ from pageObjects.file_upload import FileUpload
 from pageObjects.animatedbutton import AnimatedButton
 from pageObjects.disabledinput import DisabledInput
 from pageObjects.autowait import AutoWait
+from pageObjects.click import Click
+
 
 @pytest.mark.usefixtures("setup")
 class TestE2E:
@@ -52,6 +54,15 @@ class TestE2E:
         ajaxdata_test.ajax_data()
         print("Completed ajax data testing !!")
         driver.back()
+        
+    def test_click(self):
+        driver = self.driver
+        print("Launching the click url...")
+        click_test = Click(driver)
+        click_test.clicktest()
+        print("Click feature testing completed.")
+        driver.back()
+        
         
     def test_text_inputbox(self):
         driver = self.driver
